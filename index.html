@@ -3,155 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01% Done | Kai</title>
+    <title>ITSKAIDEN | 01% Done</title>
     <style>
         body {
-            background: #1e1e1e; 
-            color: #d1d1d1;     
-            font-family: 'Inter', -apple-system, sans-serif;
-            line-height: 1.5;
-            padding: 40px 20px;
-            max-width: 600px; /* Sedikit lebih lebar untuk menampung 3 foto */
-            margin: 0 auto;
+            background: #1e1e1e; color: #d1d1d1;     
+            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 0; line-height: 1.6; text-align: center; 
         }
 
-        .welcome-box {
-            background: #2a2a2a; 
-            padding: 10px 15px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-bottom: 25px;
-            font-size: 0.85rem;
-            color: #fff;
+        /* Navigation */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 8%; background: #181818; border-bottom: 1px solid #333;
+            position: sticky; top: 0; z-index: 1000;
         }
 
-        h1, h2 { color: #ffffff; font-weight: 700; margin-bottom: 5px; }
-        h1 { font-size: 2rem; margin-top: 0; }
+        /* Hero */
+        .hero { padding: 80px 20px; background: #252525; }
+        .welcome-tag { font-size: 0.7rem; color: #fff; background: #3a3a3a; padding: 6px 16px; border-radius: 50px; margin-bottom: 20px; display: inline-block; }
+        h1 { font-size: 3.5rem; margin: 0; color: #fff; letter-spacing: -2px; }
+
+        /* Banner & Full Width Images */
+        .banner-img {
+            width: 100%; max-height: 500px; object-fit: cover;
+            display: block; border-top: 1px solid #333; border-bottom: 1px solid #333;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+
         h2 {
-            margin-top: 40px;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border-bottom: 1px solid #333;
-            padding-bottom: 5px;
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 4px;
+            color: #555; margin: 60px 0 30px; display: flex; align-items: center; justify-content: center;
+        }
+        h2::before, h2::after { content: ""; flex: 1; height: 1px; background: #333; margin: 0 15px; }
+
+        /* The Mindset Text */
+        .mindset-text {
+            font-size: 1.1rem; color: #999; line-height: 1.8;
+            max-width: 600px; margin: 0 auto;
         }
 
-        /* --- GRID 3 KOLOM DENGAN HOVER & CAPTION --- */
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Tiga berjejer */
-            gap: 15px;
-            margin: 25px 0;
+        /* Snapshots 3 Berjejer */
+        .snapshots-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 40px;
+        }
+        .thumb-card { background: #252525; border-radius: 8px; overflow: hidden; border: 1px solid #333; }
+        .thumb-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; transition: 0.4s; }
+        .thumb-card:hover img { transform: scale(1.1); }
+        .img-caption { padding: 10px; font-size: 0.7rem; color: #666; font-style: italic; }
+
+        /* Video */
+        .video-box { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; border: 1px solid #333; }
+        .video-box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        /* Journal - Fix Biar Gak Kepotong */
+        .journal-box { 
+            font-size: 1rem; color: #aaa; background: #252525; 
+            padding: 30px; border-radius: 12px; border: 1px solid #333; 
+            text-align: left; width: 100%; box-sizing: border-box; /* Biar padding gak nambah lebar */
         }
 
-        .photo-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+        /* Footer */
+        footer { margin-top: 60px; padding: 60px 20px; background: #181818; border-top: 1px solid #333; }
+        .social-btn { display: inline-flex; align-items: center; gap: 8px; color: #fff; text-decoration: none; border: 1px solid #333; padding: 12px 24px; border-radius: 8px; transition: 0.3s; }
+        .social-btn:hover { background: #fff; color: #000; }
 
-        .photo-wrapper {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            overflow: hidden; /* Penting untuk efek zoom */
-            border-radius: 8px;
-            border: 1px solid #333;
-        }
-
-        .photo-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease; /* Efek halus saat di-hover */
-        }
-
-        /* Efek Hover: Foto membesar dikit saat disentuh/kursor di atasnya */
-        .photo-wrapper:hover img {
-            transform: scale(1.1);
-        }
-
-        .individual-caption {
-            font-size: 0.75rem;
-            color: #777;
-            margin-top: 8px;
-            font-style: italic;
-            text-align: center;
-        }
-
-        /* --- VIDEO & JOURNAL --- */
-        .video-container {
-            position: relative; padding-bottom: 56.25%; height: 0;
-            overflow: hidden; border-radius: 12px; border: 1px solid #333;
-        }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        
-        .journal-box {
-            background: #252525; padding: 20px; border-radius: 10px;
-            border: 1px solid #333; font-size: 0.95rem;
-        }
-
-        .social-link {
-            display: flex; align-items: center; gap: 10px;
-            text-decoration: none; color: #fff; margin-top: 30px; font-weight: 600;
-        }
-
-        .footer { margin-top: 50px; font-size: 0.75rem; color: #555; text-align: center; }
     </style>
 </head>
 <body>
 
-    <div class="welcome-box">
-        Welcome to Kai's personal web.
-    </div>
-
-    <h1>01% Done</h1>
-    <p style="opacity: 0.8;">just taking it slow, one pixel at a time.</p>
-
-    <h2>THE MINDSET</h2>
-    <p style="opacity: 0.8;">A place for unfinished thoughts and quiet progress.</p>
-
-    <div class="photo-grid">
-        <div class="photo-item">
-            <div class="photo-wrapper">
-                <img src="profile4.jpg" alt="Entry 1">
-            </div>
-            <span class="individual-caption">as i am.</span>
+    <nav>
+        <div style="font-weight:900; letter-spacing:2px; color:#fff;">ITSKAIDEN</div>
+        <div class="nav-links">
+            <a href="#mindset" style="color:#888; text-decoration:none; font-size:0.7rem; margin-left:15px; text-transform:uppercase;">Mindset</a>
+            <a href="#snapshots" style="color:#888; text-decoration:none; font-size:0.7rem; margin-left:15px; text-transform:uppercase;">Snapshots</a>
         </div>
-        <div class="photo-item">
-            <div class="photo-wrapper">
-                <img src="profile5.jpg" alt="Entry 2">
+    </nav>
+
+    <div class="hero">
+        <div class="welcome-tag">WELCOME TO MY PERSONAL WEB</div>
+        <h1>01% Done</h1>
+    </div>
+
+    <img src="profile2.jpg" class="banner-img" alt="Header Banner">
+
+    <div class="container">
+        <section id="mindset">
+            <h2>The Mindset</h2>
+            <p class="mindset-text">
+                Not really a portfolio, just a digital dump for everything i create. 
+                I'm just a guy trying to make sense of the noise through pixels and sound. 
+                Always 01% done, because finished is boring.
+            </p>
+        </section>
+    </div>
+
+    <img src="profile3.jpg" class="banner-img" alt="Mid Section">
+
+    <div class="container">
+        <section id="snapshots">
+            <h2>Snapshots</h2>
+            <div class="snapshots-grid">
+                <div class="thumb-card">
+                    <img src="profile6.jpg">
+                    <div class="img-caption">as i am.</div>
+                </div>
+                <div class="thumb-card">
+                    <img src="profile5.jpg">
+                    <div class="img-caption">awokawok moment.</div>
+                </div>
+                <div class="thumb-card">
+                    <img src="profile4.jpg">
+                    <div class="img-caption">sokin ngab.</div>
+                </div>
             </div>
-            <span class="individual-caption">awokaok moment.</span>
-        </div>
-        <div class="photo-item">
-            <div class="photo-wrapper">
-                <img src="profile6.jpg" alt="Entry 3">
+        </section>
+
+        <section id="onrepeat">
+            <h2>On Repeat</h2>
+            <p style="font-size: 0.8rem; font-style: italic; color: #666; margin-bottom: 20px;">"A project with the homies. Check it out!"</p>
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/42wfEs7oIP8" frameborder="0" allowfullscreen></iframe>
             </div>
-            <span class="individual-caption">sokin warkop.</span>
-        </div>
+        </section>
+
+        <section id="journal">
+            <h2>The Journal</h2>
+            <div class="journal-box">
+                being 01% done is a choice. it means i'm always starting, always learning, and never standing still. today was just another day of trying to get the vision right. sometimes it works, sometimes it doesn't, but the struggle is what makes it fun. we move regardless.
+            </div>
+        </section>
     </div>
 
-    <h2>ON REPEAT</h2>
-    <p style="font-size: 0.8rem; font-style: italic; color: #777; margin-bottom: 10px;">
-        "This is a music video i made with my friends, go check it out guys!:D"
-    </p>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/42wfEs7oIP8" allowfullscreen></iframe>
-    </div>
+    <img src="profile7.jpg" class="banner-img" style="margin-top: 60px;" alt="Closing Banner">
 
-    <h2>JOURNAL</h2>
-    <div class="journal-box">
-        honestly, being 01% done is better than 00%. today was a mix of "we're so back" and "it's over," but i'm choosing to romanticize the struggle. currently learning that i don't have to have everything figured out right now. just vibes, good music, and making sure my pixels look right. we move.
-    </div>
-
-    <a href="https://instagram.com/sarangmokel" class="social-link" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="20" alt="IG">
-        @sarangmokel
-    </a>
-
-    <div class="footer">
-        © 2025 — KAIDEN
-    </div>
+    <footer>
+        <a href="https://instagram.com/sarangmokel" class="social-btn" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="18" alt="">
+            @sarangmokel
+        </a>
+        <p style="margin-top: 30px; color: #444; font-size: 0.7rem; letter-spacing: 2px;">© 2025 — KAIDEN. BUILT FROM SCRATCH.</p>
+    </footer>
 
 </body>
 </html>
