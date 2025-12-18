@@ -1,53 +1,97 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>01% Done</title>
-  <style>
-    body {
-      background: #0f0f0f;
-      color: #f5f5f5;
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      line-height: 1.6;
-    }
-    img {
-      max-width: 100%;
-      margin: 20px 0;
-    }
-    a {
-      color: #0092FF;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01% Done</title>
+    <style>
+        /* Gaya Dasar (Aesthetic Dark Mode) */
+        body {
+            background: #121212; /* Hitam pekat tapi soft */
+            color: #e0e0e0;     /* Putih tulang biar ga sakit mata */
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.4;
+            padding: 40px 20px;
+            max-width: 500px;  /* Bikin konten ngumpul di tengah */
+            margin: 0 auto;
+        }
+
+        /* Ngatur Jarak Judul biar ga kejauhan */
+        h1, h2 {
+            margin-bottom: 5px; 
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase; /* Biar kayak header pro */
+        }
+
+        p {
+            margin-top: 0;      /* Biar nempel sama judul di atasnya */
+            margin-bottom: 15px;
+            opacity: 0.8;       /* Biar teks isi agak redup dikit, estetik */
+            font-size: 0.95rem;
+        }
+
+        /* Foto Profil - Biar ga kegedean dan rapi */
+        .profile-img {
+            width: 100%;
+            max-width: 400px;   /* Batas maksimal gede foto */
+            border-radius: 12px; /* Sudutnya tumpul biar modern */
+            margin: 10px 0;
+            filter: grayscale(20%); /* Efek dikit biar keren */
+        }
+
+        /* Video biar responsive */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
 
-  <h1>01% Done</h1>
-  <p>sedikit demi sedikit tiap hari, gapapa ga harus sempurna.</p>
+    <h1>01% Done</h1>
+    <p>Step by step every day, it doesn't have to be perfect.</p>
 
-  <h2>Tentang</h2>
-  <p>
-    a place for unfinished thoughts and quiet progress.
-    kai's personal web.
-  </p>
+    <h2>ABOUT ME</h2>
+    <p>A place for unfinished thoughts and quiet progress. A myth.</p>
+    <p>Welcome to Kai's personal web.</p>
 
-  <h2>Gambar</h2>
-  <img src="profile.jpg" alt="gambar">
+    <img src="profile.jpg" alt="Profile" class="profile-img">
 
-  <h2>Video</h2>
-<iframe width="560" height="315" 
-src="https://www.youtube.com/embed/42wfEs7oIP8" 
-title="YouTube video player" frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-allowfullscreen></iframe>
+    <h2>LISTEN / WATCH</h2>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/42wfEs7oIP8" allowfullscreen></iframe>
+    </div>
 
+    <h2>JOURNAL</h2>
+    <p>Today I learned that even slow steps forward are still steps forward.</p>
 
-
-  <h2>Tulisan</h2>
-  <p>
-    hari ini gua belajar kalau jalan pelan pun tetep jalan.
-  </p>
+    <div class="footer">
+        © 2025 itskaiden
+    </div>
 
 </body>
 </html>
