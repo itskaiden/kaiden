@@ -7,30 +7,35 @@
     <style>
         /* Gaya Dasar (Aesthetic Dark Mode) */
         body {
-            background: #121212; /* Hitam pekat tapi soft */
-            color: #e0e0e0;     /* Putih tulang biar ga sakit mata */
+            background: #121212; 
+            color: #e0e0e0;     
             font-family: 'Inter', -apple-system, sans-serif;
             line-height: 1.4;
             padding: 40px 20px;
-            max-width: 500px;  /* Bikin konten ngumpul di tengah */
+            max-width: 500px;  
             margin: 0 auto;
         }
 
-        /* Gaya untuk teks Welcome dengan background abu-abu */
+        /* Welcome Box paling atas */
         .welcome-box {
-            background: #2a2a2a; /* Abu-abu agak terang */
+            background: #2a2a2a; 
             padding: 10px 15px;
             border-radius: 8px;
-            display: inline-block; /* Supaya background ngikutin panjang teks */
-            margin: 15px 0;
+            display: inline-block;
+            margin-bottom: 25px;
             font-size: 0.9rem;
+            font-weight: 500;
         }
 
-        /* Ngatur Jarak Judul biar ga kejauhan */
         h1, h2 {
             margin-bottom: 5px; 
             color: #ffffff;
             font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-top: 0;
         }
 
         h2 {
@@ -47,7 +52,6 @@
             font-size: 0.95rem;
         }
 
-        /* Foto Profil */
         .profile-img {
             width: 100%;
             max-width: 400px;
@@ -56,16 +60,14 @@
             filter: grayscale(20%);
         }
 
-        /* Keterangan Gambar (Caption) */
-        .img-caption {
+        .caption {
             font-size: 0.85rem;
             font-style: italic;
             color: #aaaaaa;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             display: block;
         }
 
-        /* Video Container */
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
@@ -82,7 +84,6 @@
             border: 0;
         }
 
-        /* Instagram Link Style */
         .social-link {
             display: flex;
             align-items: center;
@@ -108,26 +109,29 @@
 </head>
 <body>
 
-    <h1>01% Done</h1>
-    <p>Step by step every day, it doesn't have to be perfect.</p>
-    
     <div class="welcome-box">
         Welcome to Kai's personal web.
     </div>
 
+    <h1>01% Done</h1>
+    <p>making progress, even if it's barely noticeable.</p>
+
     <h2>ABOUT ME</h2>
-    <p>A place for unfinished thoughts and quiet progress. A myth.</p>
+    <p>A place for unfinished thoughts and quiet progress.</p>
 
     <img src="profile.jpg" alt="Profile" class="profile-img">
-    <span class="img-caption">"A casual selfie taken while resting. nothing planned, just me as i am."</span>
+    <span class="caption">"A casual selfie taken while resting. nothing planned, just me as i am haha."</span>
 
     <h2>LISTEN / WATCH</h2>
+    <span class="caption">"This is a music video i made with my friends, go check it out!"</span>
     <div class="video-container">
         <iframe src="https://www.youtube.com/embed/42wfEs7oIP8" allowfullscreen></iframe>
     </div>
 
     <h2>JOURNAL</h2>
-    <p>Today I learned that even slow steps forward are still steps forward.</p>
+    <p>
+        honestly, being 01% done is better than 00%. today was a mix of "we're so back" and "it's over," but i'm choosing to romanticize the struggle. currently learning that i don't have to have everything figured out right now. just vibes, good music, and making sure my pixels look right. we move.
+    </p>
 
     <a href="https://instagram.com/sarangmokel" class="social-link" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="IG">
@@ -135,7 +139,7 @@
     </a>
 
     <div class="footer">
-        © 2025 itskaiden
+        © 2025 kaiden
     </div>
 
 </body>
