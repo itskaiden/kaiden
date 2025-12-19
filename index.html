@@ -16,12 +16,10 @@
             padding: 20px 8%; background: #181818; border-bottom: 1px solid #333;
             position: sticky; top: 0; z-index: 1000;
         }
-        .nav-links a { color: #888; text-decoration: none; font-size: 0.7rem; margin-left: 15px; text-transform: uppercase; }
 
         .hero { padding: 80px 20px; background: #252525; }
-        .welcome-tag { font-size: 0.7rem; color: #fff; background: #3a3a3a; padding: 6px 16px; border-radius: 50px; margin-bottom: 20px; display: inline-block; }
+        .welcome-tag { font-size: 0.75rem; color: #fff; background: #3a3a3a; padding: 8px 18px; border-radius: 8px; margin-bottom: 20px; display: inline-block; }
         h1 { font-size: 3.5rem; margin: 0; color: #fff; letter-spacing: -2px; }
-        .subheadline { font-size: 1rem; color: #777; margin-top: 10px; }
 
         .banner-img { width: 100%; max-height: 500px; object-fit: cover; display: block; border-top: 1px solid #333; border-bottom: 1px solid #333; }
 
@@ -33,52 +31,56 @@
         }
         h2::before, h2::after { content: ""; flex: 1; height: 1px; background: #333; margin: 0 15px; }
 
-        /* PLAYLIST GRID */
+        /* --- PLAYLIST GRID --- */
         .playlist-grid {
-            display: grid; grid-template-columns: repeat(4, 1fr); 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
             gap: 15px; margin-bottom: 40px;
         }
-        .album-card { position: relative; border-radius: 8px; overflow: hidden; border: 1px solid #333; transition: 0.3s; }
+        .album-card { position: relative; border-radius: 8px; overflow: hidden; border: 1px solid #333; display: block; }
         .album-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; transition: 0.4s; }
         .album-card:hover img { transform: scale(1.1); filter: brightness(0.5); }
 
-        /* SNAPSHOTS GRID 3 KOLOM */
+        /* --- SNAPSHOTS GRID 3 KOLOM --- */
         .snapshots-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
             gap: 15px; margin-bottom: 40px;
         }
-        .thumb-card { background: #252525; border-radius: 8px; overflow: hidden; border: 1px solid #333; }
-        .thumb-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; transition: 0.4s; }
-        .thumb-card:hover img { transform: scale(1.05); }
+        .thumb-card { background: #252525; border-radius: 12px; overflow: hidden; border: 1px solid #333; }
+        .thumb-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; }
         .img-caption { padding: 10px; font-size: 0.7rem; color: #666; font-style: italic; }
 
-        .journal-box { 
-            font-size: 1rem; color: #aaa; background: #252525; 
-            padding: 30px; border-radius: 12px; border: 1px solid #333; 
-            text-align: left; width: 100%; box-sizing: border-box; 
+        /* --- VIDEO SECTION --- */
+        .video-box {
+            position: relative; padding-bottom: 56.25%; height: 0;
+            border-radius: 12px; overflow: hidden; border: 1px solid #333;
+            margin-bottom: 30px;
         }
+        .video-box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-        footer { margin-top: 60px; padding: 60px 20px; background: #181818; border-top: 1px solid #333; }
-        .social-link { color: #fff; text-decoration: none; font-weight: bold; }
+        .journal-box { font-size: 1rem; color: #aaa; background: #252525; padding: 30px; border-radius: 12px; border: 1px solid #333; text-align: left; }
+
+        footer { margin-top: 60px; padding: 60px 20px; border-top: 1px solid #333; }
     </style>
 </head>
 <body>
 
     <nav>
         <div style="font-weight:900; letter-spacing:2px; color:#fff;">ITSKAIDEN</div>
-        <div class="nav-links">
-            <a href="#playlist">Playlist</a>
-            <a href="#snapshots">Snapshots</a>
+        <div style="display:flex; gap:15px;">
+            <a href="#playlist" style="color:#888; text-decoration:none; font-size:0.7rem;">PLAYLIST</a>
+            <a href="#snapshots" style="color:#888; text-decoration:none; font-size:0.7rem;">SNAPSHOTS</a>
         </div>
     </nav>
 
     <div class="hero">
-        <div class="welcome-tag">Welcome to my personal web.</div>
+        <div class="welcome-tag">Welcome to Kai's personal web.</div>
         <h1>01% Done</h1>
-        <p class="subheadline">just taking it slow, one pixel at a time.</p>
+        <p style="color:#777;">just taking it slow, one pixel at a time.</p>
     </div>
 
-    <img src="profile.jpg" class="banner-img">
+    <img src="profile2.jpg" class="banner-img">
 
     <div class="container">
         <section id="mindset">
@@ -91,49 +93,55 @@
         <section id="playlist">
             <h2>ON PLAYLIST</h2>
             <div class="playlist-grid">
-                <a href="https://open.spotify.com/track/2wAiFWjRupWmnDkQcu91MF?si=ToOnDHGITOWEffTJ0MsWow0" target="_blank" class="album-card"><img src="https://i.scdn.co/image/ab67616d0000b27341e31cae0964724803058866"></a>
-                <a href="https://open.spotify.com/track/2wAiFWjRupWmnDkQcu91MF?si=ToOnDHGITOWEffTJ0MsWow1" target="_blank" class="album-card"><img src="https://i.scdn.co/image/ab67616d0000b273449b28292f768561d2d371d9"></a>
-                <a href="https://open.spotify.com/track/2wAiFWjRupWmnDkQcu91MF?si=ToOnDHGITOWEffTJ0MsWow2" target="_blank" class="album-card"><img src="https://i.scdn.co/image/ab67616d0000b273678096339031d279930438a0"></a>
-                <a href="https://open.spotify.com/track/2wAiFWjRupWmnDkQcu91MF?si=ToOnDHGITOWEffTJ0MsWow3" target="_blank" class="album-card"><img src="https://i.scdn.co/image/ab67616d0000b273d9d7f6c3a6f1b2e1d0f5a1c2"></a>
+                <a href="https://open.spotify.com/track/6UeS0662MvoZpXvj8oU086" target="_blank" class="album-card">
+                    <img src="https://i.scdn.co/image/ab67616d0000b27341e31cae0964724803058866">
+                </a>
+                <a href="https://open.spotify.com/track/449b28292f768561d2d371d9" target="_blank" class="album-card">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273449b28292f768561d2d371d9">
+                </a>
+                <a href="https://open.spotify.com/track/678096339031d279930438a0" target="_blank" class="album-card">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273678096339031d279930438a0">
+                </a>
+                <a href="https://open.spotify.com/track/d9d7f6c3a6f1b2e1d0f5a1c2" target="_blank" class="album-card">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273d9d7f6c3a6f1b2e1d0f5a1c2">
+                </a>
             </div>
         </section>
     </div>
 
-    <img src="profile2.jpg" class="banner-img">
+    <img src="profile3.jpg" class="banner-img">
 
     <div class="container">
         <section id="snapshots">
-            <h2>Snapshots</h2>
+            <h2>SNAPSHOTS</h2>
             <div class="snapshots-grid">
-                <div class="thumb-card">
-                    <img src="profile3.jpg">
-                    <div class="img-caption">as i am.</div>
-                </div>
-                <div class="thumb-card">
-                    <img src="profile4.jpg">
-                    <div class="img-caption">awokawok moment.</div>
-                </div>
-                <div class="thumb-card">
-                    <img src="profile5.jpg">
-                    <div class="img-caption">sokin ngab.</div>
-                </div>
+                <div class="thumb-card"><img src="profile6.jpg"><div class="img-caption">as i am.</div></div>
+                <div class="thumb-card"><img src="profile5.jpg"><div class="img-caption">awokawok moment.</div></div>
+                <div class="thumb-card"><img src="profile4.jpg"><div class="img-caption">sokin ngab.</div></div>
+            </div>
+        </section>
+
+        <section id="on-repeat">
+            <h2>ON REPEAT</h2>
+            <p style="font-size: 0.8rem; font-style: italic; color: #666; margin-bottom: 20px;">"This is a music video i made with my friends, go check it out guys!:D"</p>
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/42wfEs7oIP8" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
 
         <section id="journal">
-            <h2>ON REPEAT</h2>
-            <p style="font-size: 0.8rem; font-style: italic; color: #666; margin-bottom: 20px;">"This is a music video i made with my friends, go check it out guys!:D"</p>
+            <h2>THE JOURNAL</h2>
             <div class="journal-box">
                 being 01% done is a choice. it means i'm always starting, always learning, and never standing still. today was just another day of trying to get the vision right. sometimes it works, sometimes it doesn't, but the struggle is what makes it fun. we move regardless.
             </div>
         </section>
     </div>
 
-    <img src="profile6.jpg" class="banner-img" style="margin-top: 40px;">
+    <img src="profile8.jpg" class="banner-img" style="margin-top: 40px;">
 
     <footer>
-        <a href="https://instagram.com/sarangmokel" class="social-link" target="_blank">@sarangmokel</a>
-        <p style="margin-top: 20px; color: #444; font-size: 0.7rem;">© 2025 —KAIDEN. BUILT FROM SCRATCH.</p>
+        <a href="https://instagram.com/sarangmokel" style="color:#fff; text-decoration:none; font-weight:bold;">@sarangmokel</a>
+        <p style="margin-top: 20px; color: #444; font-size: 0.7rem;">© 2025 — KAIDEN. BUILT FROM SCRATCH.</p>
     </footer>
 
 </body>
