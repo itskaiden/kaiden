@@ -16,9 +16,10 @@
             padding: 20px 8%; background: #181818; border-bottom: 1px solid #333;
             position: sticky; top: 0; z-index: 1000;
         }
+        .nav-links a { color: #888; text-decoration: none; font-size: 0.7rem; margin-left: 15px; text-transform: uppercase; }
 
         .hero { padding: 80px 20px; background: #252525; }
-        .welcome-tag { font-size: 0.75rem; color: #fff; background: #3a3a3a; padding: 8px 18px; border-radius: 8px; margin-bottom: 20px; display: inline-block; }
+        .welcome-tag { font-size: 0.7rem; color: #fff; background: #3a3a3a; padding: 6px 16px; border-radius: 50px; margin-bottom: 20px; display: inline-block; }
         h1 { font-size: 3.5rem; margin: 0; color: #fff; letter-spacing: -2px; }
 
         .banner-img { width: 100%; max-height: 500px; object-fit: cover; display: block; border-top: 1px solid #333; border-bottom: 1px solid #333; }
@@ -31,32 +32,36 @@
         }
         h2::before, h2::after { content: ""; flex: 1; height: 1px; background: #333; margin: 0 15px; }
 
-        /* --- PLAYLIST GRID --- */
+        /* --- PLAYLIST STYLING --- */
         .playlist-grid {
-            display: grid; 
-            grid-template-columns: repeat(4, 1fr); 
+            display: grid; grid-template-columns: repeat(4, 1fr); 
             gap: 15px; margin-bottom: 40px;
         }
-        .album-card { position: relative; border-radius: 8px; overflow: hidden; border: 1px solid #333; display: block; }
+        .album-link { text-decoration: none; display: block; transition: 0.3s; }
+        .album-card { position: relative; border-radius: 8px; overflow: hidden; border: 1px solid #333; }
         .album-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; transition: 0.4s; }
-        .album-card:hover img { transform: scale(1.1); filter: brightness(0.5); }
+        .album-link:hover .album-card img { transform: scale(1.1); filter: brightness(0.6); }
+        
+        .album-title { 
+            font-size: 9px; /* Huruf kecil sesuai request */
+            color: #777; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            margin-top: 10px; 
+            line-height: 1.2;
+        }
 
         /* --- SNAPSHOTS GRID 3 KOLOM --- */
         .snapshots-grid {
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
+            display: grid; grid-template-columns: repeat(3, 1fr); 
             gap: 15px; margin-bottom: 40px;
         }
-        .thumb-card { background: #252525; border-radius: 12px; overflow: hidden; border: 1px solid #333; }
+        .thumb-card { background: #252525; border-radius: 8px; overflow: hidden; border: 1px solid #333; }
         .thumb-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; }
         .img-caption { padding: 10px; font-size: 0.7rem; color: #666; font-style: italic; }
 
-        /* --- VIDEO SECTION --- */
-        .video-box {
-            position: relative; padding-bottom: 56.25%; height: 0;
-            border-radius: 12px; overflow: hidden; border: 1px solid #333;
-            margin-bottom: 30px;
-        }
+        /* VIDEO */
+        .video-box { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; border: 1px solid #333; margin-bottom: 30px; }
         .video-box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
         .journal-box { font-size: 1rem; color: #aaa; background: #252525; padding: 30px; border-radius: 12px; border: 1px solid #333; text-align: left; }
@@ -68,16 +73,16 @@
 
     <nav>
         <div style="font-weight:900; letter-spacing:2px; color:#fff;">ITSKAIDEN</div>
-        <div style="display:flex; gap:15px;">
-            <a href="#playlist" style="color:#888; text-decoration:none; font-size:0.7rem;">PLAYLIST</a>
-            <a href="#snapshots" style="color:#888; text-decoration:none; font-size:0.7rem;">SNAPSHOTS</a>
+        <div class="nav-links">
+            <a href="#playlist">Playlist</a>
+            <a href="#snapshots">Snapshots</a>
         </div>
     </nav>
 
     <div class="hero">
         <div class="welcome-tag">Welcome to Kai's personal web.</div>
         <h1>01% Done</h1>
-        <p style="color:#777;">just taking it slow, one pixel at a time.</p>
+        <p style="color:#777; font-size: 0.9rem;">just taking it slow, one pixel at a time.</p>
     </div>
 
     <img src="profile2.jpg" class="banner-img">
@@ -91,23 +96,26 @@
         </section>
 
         <section id="playlist">
-    <h2>ON PLAYLIST</h2>
-    <div class="playlist-grid">
-        <a href="https://open.spotify.com/track/42wfEs7oIP8" target="_blank" class="album-card">
-            <img src="https://i.scdn.co/image/ab67616d0000b27341e31cae0964724803058866" alt="Cover 1">
-        </a>
-        <a href="https://open.spotify.com/track/5u0v3B6B9W5pXvW7Z2Z2Z2" target="_blank" class="album-card">
-            <img src="https://i.scdn.co/image/ab67616d0000b273449b28292f768561d2d371d9" alt="Cover 2">
-        </a>
-        <a href="https://open.spotify.com/track/6Y8p3B6B9W5pXvW7Z2Z2Z2" target="_blank" class="album-card">
-            <img src="https://i.scdn.co/image/ab67616d0000b273678096339031d279930438a0" alt="Cover 3">
-        </a>
-        <a href="https://open.spotify.com/track/7Z8p3B6B9W5pXvW7Z2Z2Z2" target="_blank" class="album-card">
-            <img src="https://i.scdn.co/image/ab67616d0000b273d9d7f6c3a6f1b2e1d0f5a1c2" alt="Cover 4">
-        </a>
-    </div>
-</section>
-
+            <h2>ON PLAYLIST</h2>
+            <div class="playlist-grid">
+                <a href="https://open.spotify.com/track/4uH8X73N0p5P1TfD1pMv0j" target="_blank" class="album-link">
+                    <div class="album-card"><img src="music1.jpg"></div>
+                    <div class="album-title">The Earth is a Very Small Dot</div>
+                </a>
+                <a href="https://open.spotify.com/track/4j0pS6mK69S3jLg6T5Y1oU" target="_blank" class="album-link">
+                    <div class="album-card"><img src="music2.jpg"></div>
+                    <div class="album-title">The Man Who Can’t Be Moved</div>
+                </a>
+                <a href="https://open.spotify.com/track/0X0mK99S3jLg6T5Y1oU8X7" target="_blank" class="album-link">
+                    <div class="album-card"><img src="music3.jpg"></div>
+                    <div class="album-title">Lampu Merah</div>
+                </a>
+                <a href="https://open.spotify.com/track/18v9Cd9uVBAsv3pB9V9uX7" target="_blank" class="album-link">
+                    <div class="album-card"><img src="music4.jpg"></div>
+                    <div class="album-title">Late Night Talking</div>
+                </a>
+            </div>
+        </section>
     </div>
 
     <img src="profile3.jpg" class="banner-img">
@@ -117,7 +125,7 @@
             <h2>SNAPSHOTS</h2>
             <div class="snapshots-grid">
                 <div class="thumb-card"><img src="profile6.jpg"><div class="img-caption">as i am.</div></div>
-                <div class="thumb-card"><img src="profile5.jpg"><div class="img-caption">awokawok moment.</div></div>
+                <div class="thumb-card"><img src="profile5.jpg"><div class="img-caption">awokaok moment.</div></div>
                 <div class="thumb-card"><img src="profile4.jpg"><div class="img-caption">sokin ngab.</div></div>
             </div>
         </section>
