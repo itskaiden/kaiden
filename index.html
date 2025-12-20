@@ -110,6 +110,21 @@
         .journal-box { font-size: 1rem; color: #aaa; background: #252525; padding: 30px; border-radius: 12px; border: 1px solid #333; text-align: left; }
 
         footer { margin-top: 60px; padding: 60px 20px; border-top: 1px solid #333; }
+
+        /* --- NEWS STYLE (Nambahin ini doang) --- */
+        .news-section {
+            margin: 40px auto 20px;
+            padding: 25px;
+            background: #252525;
+            border: 1px dashed #444; 
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .news-section:hover { border-color: #fff; background: #2a2a2a; }
+        .news-tag { font-size: 0.6rem; color: #ff4d4d; text-transform: uppercase; font-weight: bold; letter-spacing: 2px; display: block; margin-bottom: 10px; }
+        .news-headline { display: block; font-size: 1.4rem; font-weight: 800; color: #fff; text-decoration: none; line-height: 1.2; font-style: italic; }
+        .news-source { font-size: 0.7rem; color: #666; margin-top: 15px; display: block; text-transform: uppercase; }
     </style>
 </head>
 <body>
@@ -172,11 +187,19 @@
     <img src="profile3.jpg" class="banner-img">
 
     <div class="container">
+        <section class="news-section">
+            <span class="news-tag">● Breaking News</span>
+            <a href="news.html" class="news-headline">
+                “World's Top 3 Most Visual Men Revealed: A Surprising Newcomer Claims the #3 Spot!”
+            </a>
+            <span class="news-source">Published by Global Daily — 2025</span>
+        </section>
+
         <section id="snapshots">
             <h2>SNAPSHOTS</h2>
             <div class="snapshots-grid">
                 <div class="thumb-card"><img src="profile6.jpg"><div class="img-caption">as i am.</div></div>
-                <div class="thumb-card"><img src="profile5.jpg"><div class="img-caption">awokaok moment.</div></div>
+                <div class="thumb-card"><img src="profile5.jpg"><div class="img-caption">awokawok moment.</div></div>
                 <div class="thumb-card"><img src="profile4.jpg"><div class="img-caption">sokin ngab.</div></div>
             </div>
         </section>
