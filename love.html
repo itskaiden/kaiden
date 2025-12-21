@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Universe | For My One & Only</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=https://carrd.co/dashboard/7210176555699992/buildQuicksand:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Warna-warna lembut dan cewek banget */
         :root {
-            --pink-brave: #FFCCD1; /* Pink muda tapi bold */
-            --hero-green-soft: #D4EDDA; /* Hijau mint yang kalem */
+            --pink-brave: #FFCCD1;
+            --hero-green-soft: #D4EDDA;
             --soft-white: #FDFDFD;
             --dark-pink: #D05353;
             --text-dark: #333333;
@@ -24,20 +23,28 @@
         }
 
         .hero-section {
-            padding: 80px 20px;
-            background: rgba(255, 255, 255, 0.7); /* Transparan */
+            padding: 80px 20px 40px; /* Kurangin padding bawah biar lagu lebih depet */
+            background: rgba(255, 255, 255, 0.7);
             border-bottom: 2px solid var(--dark-pink);
             position: relative;
             overflow: hidden;
         }
-        .hero-section::before { /* Efek glitter */
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"%3E%3Cpath fill="%23fff" fill-opacity=".1" d="M1 0h1v1H1zm1 1v1H0v-1zm0 0h1v1H1z"/%3E%3C/svg%3E');
-            background-size: 8px 8px;
-            opacity: 0.1;
+
+        /* Pemutar Musik Custom di Atas */
+        .top-player {
+            margin: 30px auto;
+            max-width: 400px;
+            background: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            border: 2px solid var(--pink-brave);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
         }
+
         h1 {
             font-family: 'Dancing Script', cursive;
             font-size: 4.5rem;
@@ -52,21 +59,10 @@
             font-style: italic;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
 
-        h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2.8rem;
-            color: var(--dark-pink);
-            margin: 60px 0 30px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.05);
-        }
+        h2 { font-family: 'Dancing Script', cursive; font-size: 2.8rem; color: var(--dark-pink); margin: 60px 0 30px; }
 
-        /* Galeri Foto */
         .photo-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -81,20 +77,9 @@
             transition: transform 0.3s ease;
         }
         .gallery-item:hover { transform: translateY(-8px); }
-        .gallery-item img {
-            width: 100%;
-            height: 180px; /* Ukuran foto seragam */
-            object-fit: cover;
-            display: block;
-        }
-        .gallery-caption {
-            padding: 12px;
-            font-size: 0.85rem;
-            color: var(--text-light);
-            font-style: italic;
-        }
+        .gallery-item img { width: 100%; height: 250px; object-fit: cover; display: block; }
+        .gallery-caption { padding: 12px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
 
-        /* Artikel Khusus */
         .special-article {
             background: var(--soft-white);
             padding: 40px;
@@ -103,20 +88,8 @@
             text-align: left;
             margin-bottom: 50px;
         }
-        .article-title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 3rem;
-            color: var(--dark-pink);
-            margin-top: 0;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .article-text {
-            font-size: 1.1rem;
-            color: var(--text-dark);
-            text-align: justify;
-            margin-bottom: 20px;
-        }
+        .article-title { font-family: 'Dancing Script', cursive; font-size: 3rem; color: var(--dark-pink); text-align: center; }
+        .article-text { font-size: 1.1rem; color: var(--text-dark); text-align: justify; margin-bottom: 20px; }
         .article-text strong { color: var(--dark-pink); }
 
         .secret-link {
@@ -128,36 +101,15 @@
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            letter-spacing: 1px;
-            transition: background 0.3s ease, transform 0.2s ease;
+            transition: 0.3s ease;
         }
-        .secret-link:hover {
-            background: #B64343; /* Lebih gelap saat di-hover */
-            transform: translateY(-3px);
-        }
+        .secret-link:hover { transform: translateY(-3px); background: #B64343; }
 
-        .back-to-kai {
-            display: inline-block;
-            margin-top: 40px;
-            color: var(--text-light);
-            text-decoration: none;
-            font-size: 0.8rem;
-        }
-        .back-to-kai:hover { color: var(--dark-pink); }
-
-        footer {
-            margin-top: 60px;
-            padding: 40px 20px;
-            border-top: 1px solid rgba(208, 83, 83, 0.3);
-            color: var(--text-light);
-            font-size: 0.8rem;
-        }
+        footer { margin-top: 60px; padding: 40px 20px; border-top: 1px solid rgba(208, 83, 83, 0.3); color: var(--text-light); font-size: 0.8rem; }
 
         @media (max-width: 768px) {
             h1 { font-size: 3rem; }
-            h2 { font-size: 2rem; }
-            .article-title { font-size: 2.2rem; }
-            .photo-gallery { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+            .photo-gallery { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
@@ -166,6 +118,13 @@
     <div class="hero-section">
         <h1>My Universe</h1>
         <p class="subtitle">A special corner dedicated to the one who makes my world brighter.</p>
+        
+        <div class="top-player">
+            <span style="font-size: 0.7rem; color: var(--dark-pink); font-weight: bold; letter-spacing: 2px;">PRESS PLAY FOR THE VIBES ✨</span>
+            <audio controls style="height: 35px; width: 100%;">
+                <source src="double-take.mp3" type="audio/mpeg">
+            </audio>
+        </div>
     </div>
 
     <div class="container">
@@ -173,15 +132,15 @@
         <div class="photo-gallery">
             <div class="gallery-item">
                 <img src="loml1.jpg">
-                <p class="gallery-caption">Just a beautiful girl in a beautiful world.</p>
+                <p class="gallery-caption">Every gaze feels like a favorite song on repeat.</p>
             </div>
             <div class="gallery-item">
                 <img src="loml2.jpg">
-                <p class="gallery-caption">Every angle of you is my favorite one.</p>
+                <p class="gallery-caption">The only 'Breaking News' I'll ever care about.</p>
             </div>
             <div class="gallery-item">
                 <img src="loml3.jpg">
-                <p class="gallery-caption">The only 'Breaking News' I'll ever care about.</p>
+                <p class="gallery-caption">Which one is the cutest? Definitely not the Squirtle.</p>
             </div>
             <div class="gallery-item">
                 <img src="loml4.jpg">
@@ -189,11 +148,11 @@
             </div>
             <div class="gallery-item">
                 <img src="loml5.jpg">
-                <p class="gallery-caption">Which one is the cutest? Definitely not the Squirtle.</p>
+                <p class="gallery-caption">Just a beautiful girl in a beautiful world.</p>
             </div>
             <div class="gallery-item">
                 <img src="loml6.jpg">
-                <p class="gallery-caption">Every gaze feels like a favorite song on repeat.</p>
+                <p class="gallery-caption">Every angle of you is my favorite one.</p>
             </div>
         </div>
 
@@ -201,29 +160,22 @@
         <div class="special-article">
             <h3 class="article-title">The "Why You're My Universe" Report</h3>
             <p class="article-text">
-                Dalam penelitian mendalam yang dilakukan oleh hati ini, telah ditemukan bukti tak terbantahkan bahwa <strong>Sweeney Claire</strong> adalah pusat dari seluruh alam semesta pribadi Kai. Data menunjukkan bahwa kehadirannya memiliki dampak signifikan pada indeks kebahagiaan Kai, meningkatkan level "semangat ngoding" hingga 99%, dan secara drastis mengurangi risiko stres kronis.
+                Dalam penelitian mendalam yang dilakukan oleh hati ini, telah ditemukan bukti tak terbantahkan bahwa <strong>Sweeney Claire</strong> adalah pusat dari seluruh alam semesta pribadi Kai. Data menunjukkan bahwa kehadirannya memiliki dampak signifikan pada indeks kebahagiaan Kai.
             </p>
             <p class="article-text">
-                Variabel utama yang dianalisis meliputi: senyumannya (memberi energi positif instan), tawanya (efek melodi yang menenangkan), kecerdasannya (menstimulasi diskusi tak berujung), dan keberaniannya (menginspirasi Kai untuk terus menjadi "01% Done"). Semua faktor ini secara konsisten menunjukkan bahwa <strong>Sweeney Claire</strong> adalah subjek paling menakjubkan yang pernah ada.
+                Variabel utama yang dianalisis meliputi: senyumannya, tawanya, dan keberaniannya yang menginspirasi Kai untuk terus menjadi "01% Done". Semua faktor ini secara konsisten menunjukkan bahwa ia adalah subjek paling menakjubkan yang pernah ada.
             </p>
             <p class="article-text">
-                Kesimpulan dari riset ini adalah bahwa tidak ada satupun bintang, planet, atau galaksi yang dapat menandingi keindahan dan dampak yang ia berikan pada kehidupan Kai. Maka dari itu, secara ilmiah dan emosional, ia resmi dinobatkan sebagai <strong>The Universe.</strong>
+                Kesimpulan: Tidak ada satupun galaksi yang dapat menandingi keindahan yang ia berikan pada kehidupan Kai. Maka dari itu, ia resmi dinobatkan sebagai <strong>The Universe.</strong>
             </p>
         </div>
 
-        <a href="LINK_KARYA_RAHASIA_LO_DISINI" class="secret-link">READ MORE ABOUT US →</a>
+        <a href="#" class="secret-link">READ MORE ABOUT US →</a>
         <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 15px;">(Or a super secret message just for you)</p>
 
-        <a href="index.html" class="back-to-kai">← Back to Kai's World</a>
+        <a href="index.html" style="display: block; margin-top: 40px; color: var(--text-light); text-decoration: none; font-size: 0.8rem;">← Back to Kai's World</a>
     </div>
 
-    <div class="floating-player">
-        <span style="font-size: 0.65rem; color: var(--dark-pink); font-weight: bold;">PRESS PLAY! 🎵</span>
-        <audio controls style="height: 30px; width: 180px;">
-            <source src="double-take.mp3" type="audio/mpeg">
-        </audio>
-    </div>
-    
     <footer>
         <p>&copy; 2025 — Kai's Universe. All Rights Reserved, especially for you.</p>
     </footer>
