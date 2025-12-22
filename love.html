@@ -94,43 +94,45 @@
             justify-content: center;
         }
 
-        /* --- STYLE ARTIKEL / REPORT --- */
+        /* --- ARTIKEL REPORT FIX (EFEK STABILO MENYELURUH) --- */
         .special-article {
             background: #ffffff;
-            padding: 40px 25px;
-            border-radius: 30px;
+            padding: 35px 20px;
+            border-radius: 25px;
             text-align: left;
-            margin-bottom: 50px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            margin-bottom: 40px;
         }
 
+        /* RUMUS BARU BIAR DI HP SAMA KAYAK IPAD */
         .article-title {
             font-family: 'Dancing Script', cursive;
-            font-size: 2.8rem;
+            font-size: 2.2rem;
             color: var(--dark-pink);
             text-align: center;
             margin-bottom: 25px;
-            background: linear-gradient(transparent 70%, #ffebeb 0%);
-            display: inline-block;
-            width: 100%;
+            /* Paksa lebar penuh biar garis pink-nya nyambung terus */
+            display: block; 
+            width: calc(100% + 40px); /* Ngelebihi container dikit buat padding */
+            margin-left: -20px; 
+            padding: 5px 0;
+            background: linear-gradient(transparent 75%, #ffebeb 0%);
+            line-height: 1.2;
         }
 
-        .article-text strong {
-            color: var(--dark-pink);
-            font-weight: 700;
-        }
+        .article-text strong { color: var(--dark-pink); font-weight: 700; }
 
-        /* --- RESPONSIVE HP --- */
+        /* --- RESPONSIVE ADJUSTMENT --- */
         @media (max-width: 768px) {
             h1 { font-size: 3.5rem; }
-            .article-title { font-size: 2.2rem; }
-            .photo-gallery { gap: 10px; }
+            .article-title { 
+                font-size: 1.8rem; /* Sedikit kecilin biar gak nabrak tepi HP */
+            }
         }
 
         .secret-link {
             display: inline-block;
-            margin-top: 30px;
-            padding: 12px 35px;
+            margin-top: 20px;
+            padding: 12px 30px;
             background: var(--dark-pink);
             color: white;
             text-decoration: none;
