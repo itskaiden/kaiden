@@ -105,24 +105,21 @@
     border: 1px solid #f9f9f9;
 }
 
-/* Judul laporan biar gak kegedean di HP */
+/* Balikin font estetik buat judul laporan */
 .article-title {
-    font-family: 'Quicksand', sans-serif; /* Ganti ke font bersih */
-    font-size: 1.4rem; /* Ukuran pas untuk HP */
-    font-weight: 700;
+    font-family: 'Dancing Script', cursive; /* Balikin ke font latin estetik */
+    font-size: 2.2rem; /* Ukuran pas buat HP */
     color: var(--dark-pink);
-    margin-bottom: 20px;
     text-align: center;
-    letter-spacing: 0.5px;
-    text-transform: uppercase; /* Biar kayak judul laporan beneran */
+    margin-bottom: 20px;
 }
 
-.article-text {
-    font-size: 0.95rem; /* Ukuran teks lebih nyaman dibaca */
-    color: var(--text-dark);
-    line-height: 1.6;
-    margin-bottom: 15px;
+/* Biar nama Sweeney Claire otomatis jadi PINK BOLD */
+.article-text strong {
+    color: var(--dark-pink);
+    font-weight: 700;
 }
+
 
 /* Khusus buat HP biar makin rapi */
 @media (max-width: 768px) {
@@ -157,12 +154,20 @@
 </div>
 
         
-        <div class="top-player">
-            <span style="font-size: 0.7rem; color: var(--dark-pink); font-weight: bold; letter-spacing: 2px;">PRESS PLAY FOR THE VIBES ✨</span>
-            <audio controls preload="auto" style="height: 30px; width: 100%;">
-    <source src="double-take.mp3" type="audio/mpeg">
-</audio>
-        </div>
+        <div class="top-player" style="margin: 30px auto; max-width: 350px; background: white; padding: 15px; border-radius: 50px; border: 2px solid var(--pink-brave); box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+    <span style="font-size: 0.7rem; color: var(--dark-pink); font-weight: bold; letter-spacing: 2px; display: block; margin-bottom: 10px;">PRESS PLAY ON SPOTIFY ✨</span>
+    
+    <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/track/47isJpIIO8m7BJEhiFhnaf?si=Cb3W8Tb8SJmThnl1oUNc4g" 
+        width="100%" 
+        height="80" 
+        frameBorder="0" 
+        allowfullscreen="" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
+    </iframe>
+</div>
+
     </div>
 
     <div class="container">
