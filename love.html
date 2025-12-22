@@ -63,22 +63,36 @@
 
         h2 { font-family: 'Dancing Script', cursive; font-size: 2.8rem; color: var(--dark-pink); margin: 60px 0 30px; }
 
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            margin-bottom: 50px;
-        }
-        .gallery-item {
-            background: var(--soft-white);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
+        /* Update Galeri biar kotak rabi */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default 3 kolom di laptop */
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.gallery-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* RUMUS KOTAK SEMPURNA */
+    object-fit: cover; /* Biar foto gak gepeng */
+    display: block;
+}
+
+/* Update khusus buat HP */
+@media (max-width: 768px) {
+    h1 { font-size: 2.8rem; }
+    
+    .photo-gallery { 
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di HP (total 3 baris) */
+        gap: 8px; 
+    }
+    
         .gallery-item:hover { transform: translateY(-8px); }
-        .gallery-item img { width: 100%; height: 250px; object-fit: cover; display: block; }
-        .gallery-caption { padding: 12px; font-size: 0.85rem; color: var(--text-light); font-style: italic; }
+        .gallery-caption {
+        font-size: 0.7rem; /* Kecilin caption biar gak menuhi kotak */
+        padding: 8px;
+    }
+}
 
         .special-article {
             background: var(--soft-white);
@@ -121,9 +135,9 @@
         
         <div class="top-player">
             <span style="font-size: 0.7rem; color: var(--dark-pink); font-weight: bold; letter-spacing: 2px;">PRESS PLAY FOR THE VIBES ✨</span>
-            <audio controls style="height: 35px; width: 100%;">
-                <source src="double-take.mp3" type="audio/mpeg">
-            </audio>
+            <audio controls preload="auto" style="height: 30px; width: 100%;">
+    <source src="double-take.mp3" type="audio/mpeg">
+</audio>
         </div>
     </div>
 
@@ -135,11 +149,11 @@
                 <p class="gallery-caption">Every gaze feels like a favorite song on repeat.</p>
             </div>
             <div class="gallery-item">
-                <img src="loml2.jpg">
+                <img src="loml3.jpg">
                 <p class="gallery-caption">The only 'Breaking News' I'll ever care about.</p>
             </div>
             <div class="gallery-item">
-                <img src="loml3.jpg">
+                <img src="loml5.jpg">
                 <p class="gallery-caption">Which one is the cutest? Definitely not the Squirtle.</p>
             </div>
             <div class="gallery-item">
@@ -147,11 +161,11 @@
                 <p class="gallery-caption">Even with eyes closed, you're the clearest vision I've ever had.</p>
             </div>
             <div class="gallery-item">
-                <img src="loml5.jpg">
+                <img src="loml6.jpg">
                 <p class="gallery-caption">Just a beautiful girl in a beautiful world.</p>
             </div>
             <div class="gallery-item">
-                <img src="loml6.jpg">
+                <img src="loml2.jpg">
                 <p class="gallery-caption">Every angle of you is my favorite one.</p>
             </div>
         </div>
