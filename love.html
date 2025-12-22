@@ -94,17 +94,43 @@
     }
 }
 
-        .special-article {
-            background: var(--soft-white);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            text-align: left;
-            margin-bottom: 50px;
-        }
-        .article-title { font-family: 'Dancing Script', cursive; font-size: 3rem; color: var(--dark-pink); text-align: center; }
-        .article-text { font-size: 1.1rem; color: var(--text-dark); text-align: justify; margin-bottom: 20px; }
-        .article-text strong { color: var(--dark-pink); }
+        /* Container artikel biar lebih clean */
+.special-article {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    text-align: left;
+    margin-bottom: 50px;
+    border: 1px solid #f9f9f9;
+}
+
+/* Judul laporan biar gak kegedean di HP */
+.article-title {
+    font-family: 'Quicksand', sans-serif; /* Ganti ke font bersih */
+    font-size: 1.4rem; /* Ukuran pas untuk HP */
+    font-weight: 700;
+    color: var(--dark-pink);
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; /* Biar kayak judul laporan beneran */
+}
+
+.article-text {
+    font-size: 0.95rem; /* Ukuran teks lebih nyaman dibaca */
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Khusus buat HP biar makin rapi */
+@media (max-width: 768px) {
+    h1 { font-size: 3.2rem; } /* Judul utama sedikit dikecilin */
+    .article-title { font-size: 1.2rem; }
+    .special-article { padding: 25px 15px; }
+}
+
 
         .secret-link {
             display: inline-block;
@@ -120,18 +146,16 @@
         .secret-link:hover { transform: translateY(-3px); background: #B64343; }
 
         footer { margin-top: 60px; padding: 40px 20px; border-top: 1px solid rgba(208, 83, 83, 0.3); color: var(--text-light); font-size: 0.8rem; }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 3rem; }
-            .photo-gallery { grid-template-columns: repeat(2, 1fr); }
-        }
     </style>
 </head>
 <body>
 
     <div class="hero-section">
-        <h1>My Universe</h1>
-        <p class="subtitle">A special corner dedicated to the one who makes my world brighter.</p>
+    <div style="font-size: 1.5rem; margin-bottom: 10px;">🌸 ⚜️ 🌸</div>
+    <h1>My Universe</h1>
+    <p class="subtitle">A special corner dedicated to the one who makes my world brighter.</p>
+</div>
+
         
         <div class="top-player">
             <span style="font-size: 0.7rem; color: var(--dark-pink); font-weight: bold; letter-spacing: 2px;">PRESS PLAY FOR THE VIBES ✨</span>
