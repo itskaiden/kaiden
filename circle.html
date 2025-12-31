@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE CIRCLE | ITSKAIDEN</title>
+    <style>
+        body {
+            background: #1e1e1e; color: #d1d1d1;     
+            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 0; line-height: 1.6; text-align: center; 
+        }
+
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 8%; background: #181818; border-bottom: 1px solid #333;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .nav-links a { color: #888; text-decoration: none; font-size: 0.7rem; margin-left: 15px; text-transform: uppercase; letter-spacing: 1px; }
+
+        .hero { padding: 80px 20px 40px; background: #1e1e1e; }
+        .circle-tag { font-size: 0.6rem; color: #888; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        h1 { font-size: 3.5rem; margin: 0; color: #fff; letter-spacing: -2px; font-weight: 900; }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 15px; }
+
+        h2 {
+            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 4px;
+            color: #444; margin: 60px 0 30px; display: flex; align-items: center; justify-content: center;
+        }
+        h2::before, h2::after { content: ""; flex: 1; height: 1px; background: #222; margin: 0 15px; }
+
+        /* --- STICKY 3-COLUMN GRID (HP & LAPTOP TETEP SAMA) --- */
+        .archive-grid {
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); /* FIX 3 KOLOM */
+            gap: 10px; 
+            margin-bottom: 50px;
+        }
+
+        .archive-card { 
+            background: #252525; 
+            border: 1px solid #333; 
+            border-radius: 8px; 
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .archive-card img { 
+            width: 100%; 
+            aspect-ratio: 1/1; 
+            object-fit: cover; 
+            display: block;
+        }
+
+        .member-info {
+            padding: 8px 5px;
+            background: #252525;
+        }
+
+        .member-name { 
+            font-size: 0.65rem; 
+            color: #fff; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* --- WORDS SECTION --- */
+        .words-container { text-align: left; margin-bottom: 60px; }
+        .message-box { margin-bottom: 30px; padding-left: 15px; border-left: 1px solid #333; }
+        .message-to { font-size: 0.55rem; color: #666; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 5px; }
+        .message-text { font-size: 0.9rem; color: #aaa; font-weight: 300; }
+
+        footer { padding: 60px 20px; border-top: 1px solid #222; color: #444; font-size: 0.7rem; }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            .member-name { font-size: 0.55rem; } /* Kecilin dikit di HP biar gak kepotong */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="font-weight:900; letter-spacing:2px; color:#fff;">THE CIRCLE</div>
+        <div class="nav-links">
+            <a href="index.html">Main</a>
+            <a href="love.html">Universe</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <span class="circle-tag">Chapter — 01</span>
+        <h1>The Archive.</h1>
+        <p style="color:#555; font-size: 0.8rem; letter-spacing: 1px;">A collection of faces and memories.</p>
+    </div>
+
+    <div class="container">
+        
+        <section id="gallery">
+            <h2>THE ROSTER</h2>
+            <div class="archive-grid">
+                <div class="archive-card"><img src="circle1.jpg"><div class="member-info"><div class="SUNNY 🌻">Member 01</div></div></div>
+                <div class="archive-card"><img src="circle2.jpg"><div class="member-info"><div class="MYRE 🍁">Member 02</div></div></div>
+                <div class="archive-card"><img src="circle3.jpg"><div class="member-info"><div class="MIUKA 🍄">Member 03</div></div></div>
+                <div class="archive-card"><img src="circle4.jpg"><div class="member-info"><div class="ALARA 🌼">Member 04</div></div></div>
+                <div class="archive-card"><img src="circle5.jpg"><div class="member-info"><div class="MECHI 🪷">Member 05</div></div></div>
+                <div class="archive-card"><img src="circle6.jpg"><div class="member-info"><div class="ASYAHARU 🌱">Member 06</div></div></div>
+                <div class="archive-card"><img src="circle7.jpg"><div class="member-info"><div class="ALDO 🌿">Member 07</div></div></div>
+                <div class="archive-card"><img src="circle8.jpg"><div class="member-info"><div class="JOWENS 🌳">Member 08</div></div></div>
+                <div class="archive-card"><img src="circle9.jpg"><div class="member-info"><div class="ZIGGY 🌲">Member 09</div></div></div>
+                <div class="archive-card"><img src="circle10.jpg"><div class="member-info"><div class="JOVIE 🌵">Member 10</div></div></div>
+                <div class="archive-card"><img src="circle11.jpg"><div class="member-info"><div class="ABIAN 🍀">Member 11</div></div></div>
+            </div>
+        </section>
+
+        <section id="words">
+            <h2>THE COLLECTIVE</h2>
+            <div class="words-container">
+                <div class="message-box">
+                    <span class="message-to">TO THE PEOPLE</span>
+                    <p class="message-text">Sebelas kepala, satu frekuensi. Terima kasih sudah menjadi bagian dari perjalanan "01% Done" ini. Tanpa kalian, mungkin hidup cuma sekadar pixels tanpa makna.</p>
+                </div>
+                <div class="message-box">
+                    <span class="message-to">TO THE DYNAMICS</span>
+                    <p class="message-text">Dari tawa yang paling berisik sampai support yang paling sunyi. Semua foto di atas adalah bukti kalau kita saling melengkapi di tengah dunia yang makin chaos.</p>
+                </div>
+                <div class="message-box">
+                    <span class="message-to">THE VISION</span>
+                    <p class="message-text">Apapun yang ada di depan, asalkan langkahnya bareng kalian, gue percaya setiap proses bakal jadi cerita yang bagus buat diingat nanti.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <a href="index.html" style="color: #666; text-decoration: none; font-size: 0.7rem; letter-spacing: 2px;">← BACK TO KAI'S WORLD</a>
+    </div>
+
+    <footer>
+        <p>© 2025 — THE CIRCLE.</p>
+    </footer>
+
+</body>
+</html>
